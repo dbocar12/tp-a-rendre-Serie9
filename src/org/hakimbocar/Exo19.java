@@ -72,6 +72,8 @@ public class Exo19 {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
+		// Test question 7
 		String fileNameOut = "files/people2.txt";
 
 		if (objs != null) {
