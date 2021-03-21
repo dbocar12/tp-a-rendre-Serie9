@@ -1,14 +1,10 @@
 package org.hakimbocar;
 
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileDescriptor;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Writer;
 import java.lang.reflect.Field;
 import java.util.List;
 
@@ -27,7 +23,7 @@ public class PersonWriter extends FileWriter{
 		 	String nameBean;
 		try  {
 			int num=1;
-			wr.write("# Ceci est une ligne de commentaires2\n");
+			wr.write("# Ceci est une ligne de commentaires\n");
 			 wr.flush();
 
 			for (Object bean : beans) {
