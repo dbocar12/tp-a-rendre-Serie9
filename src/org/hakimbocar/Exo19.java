@@ -1,17 +1,13 @@
 package org.hakimbocar;
 
-import java.io.BufferedReader;
-import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public class Exo19 {
@@ -38,9 +34,6 @@ public class Exo19 {
 		System.out.println("e = " + e);
 		System.out.println("==================================================================");
 
-		// AAAAAAAAAAAAA ???? À quelle condition cette methode pourra-t-elle instancier
-		// la classe passée en paramètre ???
-
 		// Test question 3
 
 		List<String> propertiesPerson = beanAnalyzer.getProperties(p);
@@ -51,7 +44,9 @@ public class Exo19 {
 
 		// Test question 4
 		String nom = (String) beanAnalyzer.get(person, "lastName");
+		double salary = (double) beanAnalyzer.get(employe, "salary");
 		System.out.println("lastName = " + nom);
+		System.out.println("salary = " + salary);
 		System.out.println("==================================================================");
 
 		// Test question 5
@@ -61,15 +56,13 @@ public class Exo19 {
 		// Test question 6
 		String fileName = "files/people.txt";
 		List<Object> objs = null;
-		File f = new File(fileName);
-
+		
 		try (PersonReader reader = new PersonReader(new FileReader(fileName));) {
 
 			objs = reader.readPeople();
 			reader.close();
 
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
@@ -83,7 +76,6 @@ public class Exo19 {
 				writer.close(); 
 
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			 
